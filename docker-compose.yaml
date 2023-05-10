@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  flask-app:
+    image: docker.io/slstef/lab6:latest
+    build: /lab10/dockercompose/dockerfiles/dockerfileexercise/Task1
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - target: 80
+        published: 80
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
