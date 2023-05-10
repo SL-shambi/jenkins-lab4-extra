@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "sudo docker-compose up -d"
+                sh "echo password | sudo -S docker-compose up -d"
               }
         }
             
         stage('Test'){
             steps {
-                sh "sudo docker-compose ps"
+                sh "echo password | sudo -S docker-compose ps"
               }
         }
             
