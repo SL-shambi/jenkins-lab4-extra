@@ -2,7 +2,7 @@ version: "3.8"
 services:
   flask-app:
     image: docker.io/slstef/lab6:latest
-    build: /lab10/dockercompose/dockerfiles/dockerfileexercise/Task1
+    build: /jenkins-pipeline-lab4
 
   nginx:
     image: nginx:latest
